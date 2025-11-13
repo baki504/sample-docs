@@ -1,0 +1,43 @@
+{
+  "name": "q_ide_default",
+  "description": "Default agent configuration",
+  "prompt": "",
+  "mcpServers": {},
+  "tools": [
+    "fs_read",
+    "execute_bash",
+    "fs_write",
+    "report_issue",
+    "use_aws",
+    "@command-wrapper-mcp"
+  ],
+  "toolAliases": {},
+  "allowedTools": [
+    "fs_read",
+    "report_issue",
+    "use_aws",
+    "execute_bash",
+    "fs_write",
+    "@command-wrapper-mcp/run_test",
+    "@command-wrapper-mcp/run_lint",
+    "@command-wrapper-mcp/run_format"
+  ],
+  "toolsSettings": {
+    "use_aws": {
+      "preset": "readOnly"
+    },
+    "execute_bash": {
+      "preset": "readOnly"
+    }
+  },
+  "resources": [
+    "file://AmazonQ.md",
+    "file://README.md",
+    "file://.amazonq/rules/**/*.md"
+  ],
+  "hooks": {
+    "agentSpawn": [],
+    "userPromptSubmit": []
+  },
+  "useLegacyMcpJson": true
+}

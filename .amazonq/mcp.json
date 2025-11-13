@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "command-wrapper-mcp": {
+      "command": "<change-to-node-path>",
+      "args": [
+        "<change-to-project-root>/command-wrapper-mcp/build/index.js"
+      ],
+      "timeout": 60000,
+      "disabled": false
+    }
+  }
+}
